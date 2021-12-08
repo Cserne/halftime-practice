@@ -1,4 +1,5 @@
 const array1 = ["alma", "körte", "ilyenek", "sütőtök"];
+const array2 = ["alma2", "körte2", "ilyenek2", "sütőtök2"];
 
 function addValueToEndOfArray(arr, val) {
     arr.push(val);
@@ -62,3 +63,21 @@ function createNewArrayWithValue(arr, val) {
 }
 
 //console.log(createNewArrayWithValue(array1, "word"));
+
+function addArrayToArray(arr1, arr2) {
+    /*
+    for (let i = 0; i < arr1.length; i++) {
+        arr2.push(arr1[i]);
+    }
+    */
+   /*
+    for (const item of arr1) {
+       arr2.push(item);
+   }
+   */
+  // return arr2;
+
+  return arr1.concat(arr2); //Itt az eredeti array-ek maradnak!
+}
+console.log(addArrayToArray(array1, array2));
+console.log(array1, " ", array2);
